@@ -9,6 +9,7 @@ with st.sidebar:
     for i in range(player_count):
         player_names[i] = st.text_input(f'玩家{i + 1}')
 
+st.title('狼人杀发牌器')
 st.write(f'当前玩家数：{player_count}')
 
 anonymous_mode = st.checkbox('匿名模式')
