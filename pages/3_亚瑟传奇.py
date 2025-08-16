@@ -9,6 +9,8 @@ with st.sidebar:
         player_names[i] = st.text_input(f'玩家{i + 1}')
 
 st.title('亚瑟传奇发牌器')
+st.write(f'当前玩家数：{player_count}')
+
 director_cut = st.checkbox('导演剪辑版')
 youth_or_trickster = '青年'
 if director_cut and player_count >= 6:
