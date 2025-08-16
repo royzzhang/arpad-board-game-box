@@ -9,4 +9,4 @@ pages = {
     ]
 }
 
-st.navigation([st.Page('arpad_board_game_box.py', title='主页'), pages]).run()
+st.navigation(pages).run()
