@@ -20,7 +20,7 @@ gods = st.multiselect('选择神职', options=['预言家', '女巫', '猎人', 
 special_wolves = st.multiselect('选择狼人方特殊角色', options=['黑狼王', '预言狼', '隐狼', '白狼王'],
                                 default=['黑狼王'], accept_new_options=True)
 wolf_characters = ['狼人'] + special_wolves
-neutrals = st.multiselect('选择第三方角色', options=['吹笛人', '石像鬼', '丘比特'], accept_new_options=True)
+neutrals = st.multiselect('选择第三方角色', options=['吹笛人', '石像鬼', '丘比特', '白狼'], accept_new_options=True)
 characters = ['村民'] * villager_count + ['狼人'] * (wolf_count - len(special_wolves)) + gods + special_wolves + neutrals
 random.shuffle(characters)
 
