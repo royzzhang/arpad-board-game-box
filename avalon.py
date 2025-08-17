@@ -109,6 +109,6 @@ match player_count:
 if player_count >= 7:
     output_string += '任务4需要2票失败才会失败。'
 
-st.subheader('分配结果')
+st.header('分配结果')
 st.write('请点击下方文本框右上角直接复制分配结果。')
 st.code(output_string, language=None)

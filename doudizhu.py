@@ -71,6 +71,6 @@ for i in range(player_count):
     output_string += f'{i + 1}({player_names[0]}): {player_pile[i]}\n'
 output_string += f'地主牌: {reserved}'
 
-st.subheader('发牌结果')
+st.header('发牌结果')
 st.write('请点击下方文本框右上角直接复制发牌结果。')
 st.code(output_string, language=None)

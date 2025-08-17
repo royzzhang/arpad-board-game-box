@@ -24,7 +24,7 @@ neutrals = st.multiselect('选择第三方角色', options=['吹笛人', '石像
 characters = ['村民'] * villager_count + ['狼人'] * (wolf_count - len(special_wolves)) + gods + special_wolves + neutrals
 random.shuffle(characters)
 
-st.subheader('分配结果')
+st.header('分配结果')
 if len(characters) != player_count:
     st.write(f'玩家数({player_count})与角色数({len(characters)})不匹配！')
 else:
