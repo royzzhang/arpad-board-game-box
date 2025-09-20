@@ -27,7 +27,8 @@ special_wolves = game_setup.multiselect('选择狼人方特殊角色', options=[
                                         default=[], accept_new_options=True)
 wolf_characters = ['狼人'] + [wolf for wolf in special_wolves if wolf != '爪牙']
 characters = ['村民'] * villager_count + ['狼人'] * wolf_count + gods + special_wolves
-
+if '守夜人' in gods:
+    characters += ['守夜人']
 setup_complete = game_setup.form_submit_button('发牌')
 if setup_complete:
     random.shuffle(characters)
@@ -44,12 +45,4 @@ if setup_complete:
             output_string += f'{i + 1}({player_names[i]}){characters[i]}\n'
         for i in range(3):
             output_string += f'无主牌{1 + i}{characters[-3:][i]}\n'
-        wolf_index = [i + 1 for i, x in enumerate(characters[:-3]) if x in wolf_characters]
-        match len(wolf_index):
-            case 0:
-                output_string += f'本局没有初始狼人。'
-            case 1:
-                output_string += f'狼人是{wolf_index[0]}，独狼可以查看一张无主牌。'
-            case _:
-                output_string += f'狼人是{wolf_index}'
         st.code(output_string, language=None)
