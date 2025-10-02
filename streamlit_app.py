@@ -6,7 +6,7 @@ pages = [
     st.Page('avalon.py', title='阿瓦隆'),
     st.Page('quest.py', title='亚瑟传奇'),
     st.Page('doudizhu.py', title='斗地主'),
-    st.Page('one_night_ultimate_werewolf.py', title='一夜终极狼人')
+    st.Page('one-night-ultimate-werewolf.py', title='一夜终极狼人')
 ]
 
 st.navigation(pages, position='top').run()
