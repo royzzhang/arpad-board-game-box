@@ -3,7 +3,7 @@ import random
 import streamlit as st
 
 with st.sidebar:
-    player_count = st.slider('玩家数', min_value=3, max_value=10, value=6, step=1)
+    player_count = st.slider('玩家数', min_value=3, max_value=10, value=3, step=1)
     player_names = [''] * player_count
     for i in range(player_count):
         player_names[i] = st.text_input(f'玩家{i + 1}')
