@@ -46,8 +46,6 @@ if setup_complete:
         st.write(f'当前角色数({len(characters + center_wolf)})与应有角色数({player_count + 3 if '始祖狼' not in wolf_characters else player_count + 4})不匹配！')
     else:
         st.write('请点击下方文本框右上角直接复制分配结果。')
-        if anonymous_mode:
-            random.shuffle(player_names)
         output_string = ''
         for i in range(player_count):
             output_string += f'{i + 1}({player_names[i]}){characters[i]}\n'
