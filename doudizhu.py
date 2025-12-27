@@ -68,9 +68,10 @@ player_pile[0], player_pile[1], player_pile[2], reserved = deck.distribute()
 
 output_string = ''
 for i in range(player_count):
-    output_string += f'{i + 1}({player_names[0]}): {player_pile[i]}\n'
+    output_string += f'{i + 1}({player_names[i]}): {player_pile[i]}\n'
 output_string += f'地主牌: {reserved}'
 
 st.header('发牌结果')
+st.button('发牌')
 st.write('请点击下方文本框右上角直接复制发牌结果。')
 st.code(output_string, language=None)

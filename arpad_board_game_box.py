@@ -10,25 +10,25 @@ st.write('''
 ''')
 
 st.header('狼人杀')
-if st.checkbox('显示狼人杀规则'):
+if st.toggle('显示狼人杀规则'):
     with open('rules_markdown/langrensha_rules.md', 'r', encoding='utf-8') as f:
         st.markdown(f.read())
 
 st.header('阿瓦隆')
-if st.checkbox('显示阿瓦隆规则'):
+if st.toggle('显示阿瓦隆规则'):
     with open('rules_markdown/avalon_rules.md', 'r', encoding='utf-8') as f:
         st.markdown(f.read())
 
 st.header('亚瑟传奇')
-if st.checkbox('显示亚瑟传奇规则'):
+if st.toggle('显示亚瑟传奇规则'):
     with open('rules_markdown/quest_rules.md', 'r', encoding='utf-8') as f:
         st.markdown(f.read())
 
 st.header('斗地主')
-if st.checkbox('显示斗地主规则'):
+if st.toggle('显示斗地主规则'):
     st.write('不会吧不会吧，不会5202年都还有人不会玩斗地主吧？')
 
 st.header('一夜终极狼人')
-if st.checkbox('显示一夜终极狼人规则'):
+if st.toggle('显示一夜终极狼人规则'):
     with open('rules_markdown/one_night_ultimate_werewolf_rules.md', 'r', encoding='utf-8') as f:
         st.markdown(f.read())

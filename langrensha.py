@@ -15,7 +15,7 @@ st.write(f'当前玩家数：{player_count}')
 game_setup = st.form('game_setup')
 
 game_setup.header('游戏配置')
-anonymous_mode = game_setup.checkbox('匿名模式')
+anonymous_mode = game_setup.toggle('匿名模式')
 
 villager_count = game_setup.slider('村民数量', min_value=0, max_value=player_count, value=int(player_count / 3))
 wolf_count = game_setup.slider('狼人数量（包括特殊狼）', min_value=0, max_value=player_count, value=int(player_count / 3))
