@@ -16,7 +16,6 @@ st.write(f'应有角色数：{player_count + 3} (若加入始祖狼则+1)')
 game_setup = st.form('game_setup')
 
 game_setup.header('游戏配置')
-anonymous_mode = game_setup.checkbox('匿名模式')
 
 center_wolf = []
 villager_count = game_setup.slider('村民数量', min_value=0, max_value=3, value=1)
