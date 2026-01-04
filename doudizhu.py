@@ -46,11 +46,7 @@ class Deck:
         return self
 
     def distribute(self):
-        pile_1 = Pile(self.cards[:17])
-        pile_2 = Pile(self.cards[17:34])
-        pile_3 = Pile(self.cards[34:51])
-        pile_4 = Pile(self.cards[51:])
-        return pile_1, pile_2, pile_3, pile_4
+        return Pile(self.cards[:17]), Pile(self.cards[17:34]), Pile(self.cards[34:51]), Pile(self.cards[51:])
 
 
 with st.sidebar:
